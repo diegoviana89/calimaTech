@@ -1,8 +1,8 @@
 module.exports={
     getUser(email,password){
-       let query = `SELECT email FROM tbl_user WHERE email='${email}' AND password='${password}'`;
-       return query;
-    },
+        let query = `SELECT email FROM tbl_user WHERE email='${email}' AND password='${password}'`;
+        return query;
+     },
     getLessonsList(){
         let query = `SELECT * FROM tbl_lesson`;
         return query;

@@ -1,0 +1,248 @@
+{
+	"info": {
+		"_postman_id": "90c7287e-2b43-4f9d-81d9-75dfeaf0db29",
+		"name": "calimatech",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"user1@gmail.com\",\r\n    \"password\":\"1234\",\r\n    \"getToken\":true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9596/calimatech/corp/v1.0/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9596",
+					"path": [
+						"calimatech",
+						"corp",
+						"v1.0",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getLessonsByUser",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIiwiaWF0IjoxNjEzNTE2MzQwLCJleHAiOjE2MTM2MDI3NDB9.u_EFtKHGUajSabQgPP6do1i8smVy9rncg0Glk5iSDYQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9596/calimatech/corp/v1.0/lessons?email=user1@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9596",
+					"path": [
+						"calimatech",
+						"corp",
+						"v1.0",
+						"lessons"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "user1@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getLessonsList",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIiwiaWF0IjoxNjEzNTE2MzQwLCJleHAiOjE2MTM2MDI3NDB9.u_EFtKHGUajSabQgPP6do1i8smVy9rncg0Glk5iSDYQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9596/calimatech/corp/v1.0/lessons/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9596",
+					"path": [
+						"calimatech",
+						"corp",
+						"v1.0",
+						"lessons",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addNote",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIiwiaWF0IjoxNjEzNTE2MzQwLCJleHAiOjE2MTM2MDI3NDB9.u_EFtKHGUajSabQgPP6do1i8smVy9rncg0Glk5iSDYQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"user1@gmail.com\",\r\n    \"id_lesson\":2,\r\n    \"note\":\"1. nota para lesson_2 por parte de user1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9596/calimatech/corp/v1.0/lessons/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9596",
+					"path": [
+						"calimatech",
+						"corp",
+						"v1.0",
+						"lessons",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteNote",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIiwiaWF0IjoxNjEzNTE2MzQwLCJleHAiOjE2MTM2MDI3NDB9.u_EFtKHGUajSabQgPP6do1i8smVy9rncg0Glk5iSDYQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9596/calimatech/corp/v1.0/lessons?id_note=6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9596",
+					"path": [
+						"calimatech",
+						"corp",
+						"v1.0",
+						"lessons"
+					],
+					"query": [
+						{
+							"key": "id_note",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateStatus",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIiwiaWF0IjoxNjEzNTE2MzQwLCJleHAiOjE2MTM2MDI3NDB9.u_EFtKHGUajSabQgPP6do1i8smVy9rncg0Glk5iSDYQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\":\"completed\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9596/calimatech/corp/v1.0/lessons/1/user1@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9596",
+					"path": [
+						"calimatech",
+						"corp",
+						"v1.0",
+						"lessons",
+						"1",
+						"user1@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getListNotes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6InVzZXIxQGdtYWlsLmNvbSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIiwiaWF0IjoxNjEzNTE5ODc0LCJleHAiOjE2MTM2MDYyNzR9._wW50Y5U9MwvoIsltLU3ImZZZADoGIzjGVplJqhvB6M",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9596/calimatech/corp/v1.0/lessons/1/user1@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9596",
+					"path": [
+						"calimatech",
+						"corp",
+						"v1.0",
+						"lessons",
+						"1",
+						"user1@gmail.com"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
